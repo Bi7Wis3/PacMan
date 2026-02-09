@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
+<!-- <link rel="stylesheet" href="css/style.css" /> -->
+</head>
+<style>
+html,body{
+    font-family: "Lucida Console";
+}
+img{
+    width: 900px;
+    position: absolute;
+    left:0;
+    top:0px;
+/*     align: center; */
+}
+.container{
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    margin:0px;
+}
+a{ 
+     color: #30A;
+     font-family: "Lucida Console";
+}
+h4{
+    margin: 1px;
+    padding: 1px;
+}
+.dataset{
+    font-size: 2.5em;
+}
+footer{
+    height: 20px; 
+    width:100%;
+    position: absolute;
+    left: 0;
+    bottom: 0; 
+    font-family: "Lucida Console";
+}
+
+.header{
+    height: 20px; 
+    width:100%;
+    position: relative;
+    left: 0;
+    top: 300; 
+    font-family: "Lucida Console";
+}
+body {
+    margin: 0;
+    background-color: black;
+    border: 0px;
+    padding:10px 20px ;
+    background-repeat: no-repeat;
+    background-attachment: fixed;   
+    background-size: cover;
+    background-image: url('M@D.jpg'); 
+}
+#PacManCanvas{
+
+    justify-content: center;
+    background-color: none;
+    align-items: center;
+}
+#gameInfo{
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    font-family: 'Righteous', cursive;
+    color: white;
+    font-size: 20px;
+    margin-bottom: 15px;
+    width: 1200px;
+    background: linear-gradient(135deg, rgba(0,0,0,0.8), rgba(20,20,60,0.8));
+    padding: 15px 20px;
+    border-radius: 15px;
+    border: 3px solid #FFD700;
+    box-shadow: 0 0 20px rgba(255,215,0,0.5), inset 0 0 20px rgba(0,0,0,0.3);
+}
+#gameInfo > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 15px;
+}
+#gameInfo > div span:first-child {
+    font-size: 14px;
+    color: #FFD700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 5px;
+    text-shadow: 0 0 10px rgba(255,215,0,0.8);
+}
+#gameInfo > div span:last-child {
+    font-size: 28px;
+    color: #FFF;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.8), 0 0 10px rgba(255,255,255,0.5);
+}
+#statusEl{
+    visibility: hidden;
+    display: flex;
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 48px;
+    color: white;
+    font-family: 'Righteous', cursive;
+    -webkit-text-stroke: 2px black;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 30px 50px;
+    border-radius: 10px;
+    z-index: 1000;
+}
+#pacman{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right:0px;
+    bottom: 0px;
+    align-items: center;
+    justify-content: center;
+} 
+</style>
+<body>
+<div><h1 class="header"></h1></div>
+<div class="container"></div></br></br></br>
+<div class="container"><img src="https://kixx-customs.net/images/UCT.png"> </div>
+<footer><a href="https://www.Kixx-Customs.net">Powered by www.Kixx-Customs.Net</a></footer>
+<div id="pacman">
+    <div id="gameInfo">
+        <div>
+            <span>Level</span>
+            <span id="levelEl">1</span>
+        </div>
+        <div>
+            <span>Score</span>
+            <span id="scoreEl">0</span>
+        </div>
+        <div>
+            <span>High Score</span>
+            <span id="highScoreEl">0</span>
+        </div>
+        <div>
+            <span>Lives</span>
+            <span id="livesEl">3</span>
+        </div>
+    </div>
+    <canvas id="PacManCanvas"></canvas>
+    <div id="statusEl"></div>
+</div>
+
+<script src="index.js"></script>
+</body>
+</html>

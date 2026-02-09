@@ -1,0 +1,87 @@
+html,body{
+    font-family: "Lucida Console";
+}
+img{
+    width: 900px;
+    position: absolute;
+    align: center;
+}
+.container{
+    position: absolute;
+    left: 0px;
+    top: 0px; 
+    margin:0px;
+}
+a{ 
+     color: #30A;
+     font-family: "Lucida Console";
+}
+h4{
+    margin: 1px;
+    padding: 1px;
+}
+.dataset{
+    font-size: 2.5em;
+}
+footer{
+    height: 20px; 
+    width:100%;
+    position: absolute;
+    left: 0;
+    bottom: 0; 
+    font-family: "Lucida Console";
+}
+
+.header{
+    height: 20px; 
+    width:100%;
+    position: relative;
+    left: 0;
+    top: 300; 
+    font-family: "Lucida Console";
+}
+body {
+    margin: 0;
+    background-color: black;
+    border: 0px;
+    padding:10px 20px ;
+    background-repeat: no-repeat;
+    background-attachment: fixed;   
+    background-size: cover;
+    background-image: url('../M@D.jpg'); 
+}
+#PacManCanvas{
+    position: relative;
+    margin-top: 0px;
+    left: 80px;
+    background-color: none;
+}
+#score{
+    position: relative;
+    display: flex;
+    top: -520px;
+    left: -275px;
+    right: 0px;
+    justify-content: center;
+    font-family: 'Righteous', cursive;
+    color: white;
+    font-size: 24px;
+}
+#statusEl{
+    visibility: hidden;
+    display: flex;
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    bottom:0;
+    right:0;
+    left: 0;
+    font-size: 64 px;
+    color: "red";
+    font-family: 'Righteous', cursive;
+    -webkit-text-stroke: 3px black;
+}
+#pacman{
+    top: 200px;
+} 
