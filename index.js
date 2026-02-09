@@ -736,8 +736,25 @@ function animate(){
             ghost.prevCollisions = []
         }
 
-        // Now update ghost position after pathfinding has chosen direction
+        // Store position before update
+        const oldX = ghost.position.x
+        const oldY = ghost.position.y
+
+        // Update ghost position
         ghost.update()
+
+        // Safety check: if ghost is now inside a wall, revert position (but keep velocity)
+        for (let i = 0; i < boundaries.length; i++) {
+            if (circleCollidesWithRectangle({
+                circle: { ...ghost, velocity: { x: 0, y: 0 } },
+                rectangle: boundaries[i]
+            })) {
+                // Revert position but DON'T change velocity - let AI handle it next frame
+                ghost.position.x = oldX
+                ghost.position.y = oldY
+                break
+            }
+        }
     })
 
         if (player.velocity.x > 0) player.rotation = 0
