@@ -630,9 +630,31 @@ function animate(){
 
     if (!isPaused) {
         ghosts.forEach(ghost =>{
-            ghost.update()
+            // Check if ghost would collide with boundary in current direction
+            let canMove = true
+            for (let i = 0; i < boundaries.length; i++) {
+                if (circleCollidesWithRectangle({
+                    circle: {
+                        ...ghost,
+                        velocity: ghost.velocity
+                    },
+                    rectangle: boundaries[i]
+                })) {
+                    canMove = false
+                    break
+                }
+            }
 
-
+            // Only update position if no collision
+            if (canMove) {
+                ghost.update()
+            } else {
+                // Still draw the ghost but don't move it
+                ghost.draw()
+                // Force pathfinding by clearing velocity
+                ghost.velocity.x = 0
+                ghost.velocity.y = 0
+            }
 
         const collisions = []
         boundaries.forEach(boundary => {
