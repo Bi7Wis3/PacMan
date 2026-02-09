@@ -736,27 +736,8 @@ function animate(){
             ghost.prevCollisions = []
         }
 
-        // Store position before update
-        const oldX = ghost.position.x
-        const oldY = ghost.position.y
-
-        // Update ghost position
+        // Update ghost position after pathfinding
         ghost.update()
-
-        // Safety check: if ghost moved into a wall, revert position (but keep velocity)
-        for (let i = 0; i < boundaries.length; i++) {
-            const boundary = boundaries[i]
-            // Simple overlap check - is ghost center inside boundary?
-            if (ghost.position.x + ghost.radius > boundary.position.x &&
-                ghost.position.x - ghost.radius < boundary.position.x + boundary.width &&
-                ghost.position.y + ghost.radius > boundary.position.y &&
-                ghost.position.y - ghost.radius < boundary.position.y + boundary.height) {
-                // Revert position but DON'T change velocity
-                ghost.position.x = oldX
-                ghost.position.y = oldY
-                break
-            }
-        }
     })
 
         if (player.velocity.x > 0) player.rotation = 0
