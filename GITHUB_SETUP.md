@@ -1,11 +1,11 @@
 # GitHub Setup Guide
 
-Follow these steps to publish your Pacman game to GitHub.
+Follow these steps to publish your PacMan game to GitHub.
 
 ## Step 1: Initialize Git Repository
 
 ```bash
-cd /home/bitwise/Desktop/Source_Code/Pacman
+cd /home/bitwise/Desktop/Source_Code/PacMan
 git init
 ```
 
@@ -18,10 +18,10 @@ git add .
 ## Step 3: Create Initial Commit
 
 ```bash
-git commit -m "Initial commit: Pacman game with 2 levels
+git commit -m "Initial commit: PacMan game with 2 levels
 
 Features:
-- Classic Pacman gameplay
+- Classic PacMan gameplay
 - 2 progressive levels
 - Lives system and score tracking
 - Power-ups and ghost AI
@@ -57,7 +57,7 @@ Go to your repository URL:
 https://github.com/YOUR_USERNAME/pacman-game
 ```
 
-You should see your Pacman game with the README displayed!
+You should see your PacMan game with the README displayed!
 
 ## Optional: Clean Up Backup Files
 

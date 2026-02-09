@@ -1,12 +1,12 @@
-# 🎮 Pacman Game
+# 🎮 PacMan Game
 
-A classic Pacman game built with vanilla JavaScript and HTML5 Canvas. Navigate through mazes, collect pellets, avoid ghosts, and beat all levels!
+A classic PacMan game built with vanilla JavaScript and HTML5 Canvas. Navigate through mazes, collect pellets, avoid ghosts, and beat all levels!
 
-![Pacman Game Screenshot](screenshot.png)
+![PacMan Game Screenshot](screenshot.png)
 
 ## ✨ Features
 
-- **Classic Pacman Gameplay** - Navigate through mazes and collect all pellets to advance
+- **Classic PacMan Gameplay** - Navigate through mazes and collect all pellets to advance
 - **2 Progressive Levels** - Increasing difficulty with more ghosts and faster speeds (easily expandable!)
 - **Multiple Ghosts** - Face off against 2-4 ghosts depending on the level
 - **Power-Ups** - Collect power pellets to temporarily turn ghosts blue and eat them
@@ -14,12 +14,12 @@ A classic Pacman game built with vanilla JavaScript and HTML5 Canvas. Navigate t
 - **Score Tracking** - Persistent high score saved in browser localStorage
 - **Pause/Resume** - Press Space to pause the game at any time
 - **Responsive Controls** - Smooth keyboard arrow key movement
-- **Custom Maze Design** - Classic Pacman-style mazes with strategic obstacles
+- **Custom Maze Design** - Classic PacMan-style mazes with strategic obstacles
 
 ## 🎯 How to Play
 
 ### Controls
-- **Arrow Keys** - Move Pacman (Up, Down, Left, Right)
+- **Arrow Keys** - Move PacMan (Up, Down, Left, Right)
 - **Space** - Pause/Resume game
 - **R** - Restart game
 
@@ -102,7 +102,7 @@ pacman-game/
 
 ### Game Constants
 ```javascript
-PLAYER_SPEED = 5        // Pacman movement speed
+PLAYER_SPEED = 5        // PacMan movement speed
 GHOST_SPEED = 2         // Base ghost speed (increases per level)
 PELLET_POINTS = 10      // Points per pellet
 GHOST_POINTS = 50       // Points per ghost
@@ -177,7 +177,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 👏 Credits
 
-- Game Design: Inspired by the classic Pacman arcade game
+- Game Design: Inspired by the classic PacMan arcade game
 - Powered by [Kixx-Customs.Net](https://www.Kixx-Customs.net)
 - Graphics: Custom pipe and maze graphics
 
@@ -187,7 +187,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - [ ] Mobile touch controls
 - [ ] More levels
 - [ ] Different maze themes
-- [ ] Ghost personality AI (like original Pacman)
+- [ ] Ghost personality AI (like original PacMan)
 - [ ] Fruit bonus items
 - [ ] Leaderboard system
 - [ ] Difficulty settings

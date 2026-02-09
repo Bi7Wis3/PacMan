@@ -1,6 +1,6 @@
-# Contributing to Pacman Game
+# Contributing to PacMan Game
 
-First off, thank you for considering contributing to Pacman Game! It's people like you that make this project better.
+First off, thank you for considering contributing to PacMan Game! It's people like you that make this project better.
 
 ## How Can I Contribute?
 
