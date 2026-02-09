@@ -630,18 +630,27 @@ function animate(){
 
     if (!isPaused) {
         ghosts.forEach(ghost =>{
+            // Store previous position
+            const prevX = ghost.position.x
+            const prevY = ghost.position.y
+
             ghost.update()
 
-            // Check if ghost is colliding with any boundary and stop it
-            boundaries.forEach(boundary => {
+            // Check if ghost moved into a wall and revert position if so
+            for (let i = 0; i < boundaries.length; i++) {
                 if (circleCollidesWithRectangle({
                     circle: ghost,
-                    rectangle: boundary
+                    rectangle: boundaries[i]
                 })) {
+                    // Revert to previous position
+                    ghost.position.x = prevX
+                    ghost.position.y = prevY
+                    // Stop movement to trigger pathfinding
                     ghost.velocity.x = 0
                     ghost.velocity.y = 0
+                    break
                 }
-            })
+            }
 
         const collisions = []
         boundaries.forEach(boundary => {
