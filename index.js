@@ -632,7 +632,16 @@ function animate(){
         ghosts.forEach(ghost =>{
             ghost.update()
 
-
+            // Check if ghost is colliding with any boundary and stop it
+            boundaries.forEach(boundary => {
+                if (circleCollidesWithRectangle({
+                    circle: ghost,
+                    rectangle: boundary
+                })) {
+                    ghost.velocity.x = 0
+                    ghost.velocity.y = 0
+                }
+            })
 
         const collisions = []
         boundaries.forEach(boundary => {
