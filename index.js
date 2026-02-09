@@ -625,6 +625,19 @@ function animate(){
             player.velocity.x = 0
             player.velocity.y = 0
         }
+
+        // Check ghost collisions too
+        if (!isPaused) {
+            ghosts.forEach(ghost => {
+                if (circleCollidesWithRectangle({
+                    circle: ghost,
+                    rectangle: boundary
+                })) {
+                    ghost.velocity.x = 0
+                    ghost.velocity.y = 0
+                }
+            })
+        }
     })
     player.update()
 
