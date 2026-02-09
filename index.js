@@ -1,6 +1,6 @@
 // Constants
 const PLAYER_SPEED = 5;
-const GHOST_SPEED = 2;
+const GHOST_SPEED = 1.5;
 const PELLET_POINTS = 10;
 const GHOST_POINTS = 50;
 const POWER_UP_DURATION = 5000;
@@ -630,31 +630,9 @@ function animate(){
 
     if (!isPaused) {
         ghosts.forEach(ghost =>{
-            // Check if ghost would collide with boundary in current direction
-            let canMove = true
-            for (let i = 0; i < boundaries.length; i++) {
-                if (circleCollidesWithRectangle({
-                    circle: {
-                        ...ghost,
-                        velocity: ghost.velocity
-                    },
-                    rectangle: boundaries[i]
-                })) {
-                    canMove = false
-                    break
-                }
-            }
+            ghost.update()
 
-            // Only update position if no collision
-            if (canMove) {
-                ghost.update()
-            } else {
-                // Still draw the ghost but don't move it
-                ghost.draw()
-                // Force pathfinding by clearing velocity
-                ghost.velocity.x = 0
-                ghost.velocity.y = 0
-            }
+
 
         const collisions = []
         boundaries.forEach(boundary => {
